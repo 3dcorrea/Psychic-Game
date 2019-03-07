@@ -10,7 +10,7 @@
 
     <div id="game">
         <h1> The Psychic Game </h1>
-        <p>Guess what letter I'm thinking of!</p>
+        <p>What letter am I thinking of?</p>
         <p>Wins:</p>
         <p>Losses:</p>
         <p>Guesses Left:</p>
@@ -33,6 +33,7 @@
 
         document.onkeyup = function (event) {
 
+
             var userGuess = event.key;
 
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
@@ -42,9 +43,9 @@
             ];
 
 
-
-
             if (options.indexOf(userGuess) > -1) {
+
+
 
                 if (userGuess === computerGuess) {
                     wins++;
@@ -66,9 +67,8 @@
 
                 }
 
-                if (userGuess != guessChoices)
 
-
+               
                 var html =
                     "<h1> The Psychic Game </h1>" +
                     "<p>Guess what letter I'm thinking of!</p>" +
@@ -81,6 +81,7 @@
 
 
             }
+
         };
     </script>
 
